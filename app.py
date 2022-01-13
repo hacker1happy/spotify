@@ -177,6 +177,8 @@ def predict():
             if(genre==i):
                 users.append(dataset['Name'][c])
             c+=1
+        if(len(users)==0):
+            users.append("No user")
         return render_template ("predict.html",users=users)
 
 
